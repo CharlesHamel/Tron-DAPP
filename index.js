@@ -15,13 +15,13 @@ app.get('/', function (req, res) {
 const fullNode = "https://api.shasta.trongrid.io"
 const solidityNode = "https://api.shasta.trongrid.io";
 const eventServer = "https://api.shasta.trongrid.io";
-const privateKey = ''; // Enter Private key of your account
+const privateKey = 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0'; // Enter Private key of your account
 
 const tronWeb = new TronWeb(fullNode, solidityNode, eventServer, privateKey);
 
-tronWeb.setAddress(''); //Enter Address of your account
+tronWeb.setAddress('TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY'); //Enter Address of your account
 
-let contractAddress = '' //Enter Your Smart Contract Address
+let contractAddress = 'TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY' //Enter Your Smart Contract Address
 let abi = [{"constant":false,"inputs":[{"name":"value","type":"string"}],"name":"postMessage","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getMessage","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}]
 
 let instance = tronWeb.contract(abi, contractAddress);
